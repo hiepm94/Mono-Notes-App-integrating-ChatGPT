@@ -12,7 +12,14 @@
         android:theme="@style/Theme.Monoapp"
         tools:targetApi="31">
         <activity
+            android:name=".CreateNoteActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
