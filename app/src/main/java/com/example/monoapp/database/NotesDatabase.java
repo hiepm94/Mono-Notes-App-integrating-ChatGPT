@@ -7,7 +7,7 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import com.examnople.monoapp.dao.NoteDao;
+import com.example.monoapp.dao.NoteDao;
 import com.example.monoapp.entities.Note;
 
 @Database(entities = Note.class, version = 1, exportSchema = false)
