@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layoutMiscellaneous"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -138,6 +139,96 @@
             android:text="@string/layout_miscellaneous_text_pick_color_text"
             android:textColor="@color/colorWhiteTextColor"
             android:textSize="17sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutAddImage"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="13dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_image"
+            app:tint="@color/colorIcons" />
+
+        <TextView
+            android:id="@+id/textAddImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:includeFontPadding="false"
+            android:text="@string/layout_miscellaneous_text_add_image_text"
+            android:textColor="@color/colorIcons"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutAddUrl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="13dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_web_link"
+            app:tint="@color/colorIcons" />
+
+        <TextView
+            android:id="@+id/textAddURL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:includeFontPadding="false"
+            android:text="@string/layout_miscellaneous_text_add_url_text"
+            android:textColor="@color/colorIcons"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutDeleteNote"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="13dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_delete"
+            app:tint="@color/colorDelete" />
+
+        <TextView
+            android:id="@+id/textDeleteNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:includeFontPadding="false"
+            android:text="@string/layout_miscellaneous_text_delete_note_text"
+            android:textColor="@color/colorDelete"
+            android:textSize="16sp" />
+
     </LinearLayout>
 
 </LinearLayout>
