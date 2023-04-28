@@ -13,6 +13,7 @@ import android.widget.ImageView;
 
 import com.example.monoapp.R;
 import com.example.monoapp.adapters.NotesAdapter;
+import com.example.monoapp.database.NotesDatabase;
 import com.example.monoapp.entities.Note;
 
 import java.util.ArrayList;
@@ -52,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             protected List<Note> doInBackground(Void... voids) {
-                return ;
+                return NotesDatabase.getNotesDatabase(getApplicationContext())
+                        .noteDao().getAllNotes();
             }
             @Override
             protected void onPostExecute(List<Note> notes) {
@@ -60,7 +62,10 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }
+        new GetNoteTask().execute();
+
     }
+
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_CODE_ADD_NOTE && resultCode == RESULT_OK) {

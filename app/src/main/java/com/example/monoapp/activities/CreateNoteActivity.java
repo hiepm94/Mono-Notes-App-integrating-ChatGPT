@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.monoapp.R;
+import com.example.monoapp.database.NotesDatabase;
 import com.example.monoapp.entities.Note;
 
 import java.text.SimpleDateFormat;
@@ -66,7 +67,7 @@ public class CreateNoteActivity extends AppCompatActivity {
         class SaveNoteTask extends AsyncTask<Void, Void, Void> {
             @Override
             protected Void doInBackground(Void... voids) {
-                //
+                NotesDatabase.getNotesDatabase(getApplicationContext()).noteDao().insertNote(note);
                 return null;
             }
             @Override
@@ -78,5 +79,6 @@ public class CreateNoteActivity extends AppCompatActivity {
                 finish();
             }
         }
+        new SaveNoteTask().execute();
     }
 }
