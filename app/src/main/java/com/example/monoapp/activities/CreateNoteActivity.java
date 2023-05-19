@@ -67,7 +67,7 @@ public class CreateNoteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_create_note);
 
         ImageView imageBack = findViewById(R.id.imageBack);
-        imageBack.setOnClickListener(v -> onBackPressed());
+        imageBack.setOnClickListener((v) ->{ onBackPressed();});
 
         inputNoteTitle = findViewById(R.id.inputNoteTitle);
         inputNoteSubtitle = findViewById(R.id.inputNoteSubtitle);

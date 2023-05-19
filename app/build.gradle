@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 33
+    compileSdk 29
     buildToolsVersion "30.0.2"
 
     defaultConfig {
         applicationId "com.example.monoapp"
         minSdkVersion 23
-        targetSdkVersion 33
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
 
