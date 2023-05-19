@@ -27,11 +27,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
+
 import com.example.monoapp.R;
 import com.example.monoapp.database.NotesDatabase;
 import com.example.monoapp.entities.Note;
@@ -197,9 +199,15 @@ public class CreateNoteActivity extends AppCompatActivity {
     }
 
     private void initMiscellaneous() {
+        View viewMiscellaneous = findViewById(R.id.layoutMiscellaneous);
         final LinearLayout layoutMiscellaneous = findViewById(R.id.layoutMiscellaneous);
+        if (viewMiscellaneous != null && viewMiscellaneous.getLayoutParams() != null) {
+            CoordinatorLayout.LayoutParams layoutParams = (CoordinatorLayout.LayoutParams) viewMiscellaneous.getLayoutParams();
+            layoutParams.setBehavior(new BottomSheetBehavior());
+        }
         final BottomSheetBehavior<LinearLayout> bottomSheetBehavior = BottomSheetBehavior.from(layoutMiscellaneous);
-        layoutMiscellaneous.findViewById(R.id.textMiscellaneous).setOnClickListener(v -> {
+
+        layoutMiscellaneous.findViewById(R.id.textMiscellaneous).setOnClickListener((v) -> {
             if (bottomSheetBehavior.getState() != BottomSheetBehavior.STATE_EXPANDED) {
                 bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
             } else {
