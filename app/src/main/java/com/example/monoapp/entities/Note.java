@@ -104,5 +104,3 @@ public class Note implements Serializable {
         return title + "：" + dateTime;
     }
 }
-
-

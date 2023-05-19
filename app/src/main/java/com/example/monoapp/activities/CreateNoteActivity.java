@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -27,7 +28,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -38,6 +38,7 @@ import com.example.monoapp.R;
 import com.example.monoapp.database.NotesDatabase;
 import com.example.monoapp.entities.Note;
 
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -199,12 +200,8 @@ public class CreateNoteActivity extends AppCompatActivity {
     }
 
     private void initMiscellaneous() {
-        View viewMiscellaneous = findViewById(R.id.layoutMiscellaneous);
         final LinearLayout layoutMiscellaneous = findViewById(R.id.layoutMiscellaneous);
-        if (viewMiscellaneous != null && viewMiscellaneous.getLayoutParams() != null) {
-            CoordinatorLayout.LayoutParams layoutParams = (CoordinatorLayout.LayoutParams) viewMiscellaneous.getLayoutParams();
-            layoutParams.setBehavior(new BottomSheetBehavior());
-        }
+
         final BottomSheetBehavior<LinearLayout> bottomSheetBehavior = BottomSheetBehavior.from(layoutMiscellaneous);
 
         layoutMiscellaneous.findViewById(R.id.textMiscellaneous).setOnClickListener((v) -> {
@@ -392,9 +389,9 @@ public class CreateNoteActivity extends AppCompatActivity {
                 Uri selectedImageUri = data.getData();
                 if (selectedImageUri != null) {
                     try {
-//                        InputStream inputStream = getContentResolver().openInputStream(selectedImageUri);
-//                        Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
-//                        imageNote.setImageBitmap(bitmap);
+                        InputStream inputStream = getContentResolver().openInputStream(selectedImageUri);
+                        Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
+                        imageNote.setImageBitmap(bitmap);
 
                         Glide.with(CreateNoteActivity.this)
                                 .load(selectedImageUri)

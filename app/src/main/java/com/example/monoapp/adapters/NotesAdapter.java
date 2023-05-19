@@ -15,11 +15,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.makeramen.roundedimageview.RoundedImageView;
 import com.example.monoapp.R;
 import com.example.monoapp.entities.Note;
 import com.example.monoapp.listener.NotesListener;
 
-import com.makeramen.roundedimageview.RoundedImageView;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
