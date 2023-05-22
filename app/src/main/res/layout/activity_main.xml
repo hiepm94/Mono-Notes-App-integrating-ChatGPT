@@ -79,21 +79,22 @@
         android:background="@color/colorQuickActionBackground"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="20dp"
+        android:padding="15dp"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageView
-            android:id="@+id/imageAddNote"
+            android:id="@+id/imageAddgpt"
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:layout_marginStart="10dp"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_add_outline"
+            android:src="@drawable/ic_chatgpt"
             app:tint="@color/colorIcons" />
 
         <ImageView
             android:id="@+id/imageAddImage"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_marginStart="20dp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_image"
@@ -101,8 +102,8 @@
 
         <ImageView
             android:id="@+id/imageAddWebLink"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_marginStart="20dp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_web_link"

@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">Notes</string>
+    <string name="app_name">Mono</string>
     <string name="activity_create_note_input_note_title_hint">Note Title</string>
     <string name="activity_create_note_input_note_subtitle_hint">note_subtitle</string>
     <string name="activity_create_note_input_note_text_hint">Type note here..</string>
-    <string name="activity_main_text_my_note_text">My Notes</string>
+    <string name="activity_main_text_my_note_text">Mono Notes</string>
     <string name="activity_main_input_search_hint">Search notes</string>
     <string name="layout_add_url_text_add_url_title_text">Add URL</string>
     <string name="layout_add_url_input_url_hint">Enter URL</string>

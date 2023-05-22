@@ -119,6 +119,8 @@ public class CreateNoteActivity extends AppCompatActivity {
                 } else if (type.equals("URL")) {
                     textWebURL.setText(getIntent().getStringExtra("URL"));
                     layoutWebURL.setVisibility(View.VISIBLE);
+                } else if (type.equals("GPT")) {
+                    inputNoteText.setText(getIntent().getStringExtra("GPT"));
                 }
             }
         }
@@ -219,7 +221,7 @@ public class CreateNoteActivity extends AppCompatActivity {
         final ImageView imageColor5 = layoutMiscellaneous.findViewById(R.id.imageColor5);
 
         layoutMiscellaneous.findViewById(R.id.viewColor1).setOnClickListener(v -> {
-            selectedNoteColor = "#333333";
+            selectedNoteColor = "#000000";
             imageColor1.setImageResource(R.drawable.ic_done);
             imageColor2.setImageResource(0);
             imageColor3.setImageResource(0);
@@ -259,7 +261,7 @@ public class CreateNoteActivity extends AppCompatActivity {
         });
 
         layoutMiscellaneous.findViewById(R.id.viewColor5).setOnClickListener(v -> {
-            selectedNoteColor = "#000000";
+            selectedNoteColor = "#00b100";
             imageColor1.setImageResource(0);
             imageColor2.setImageResource(0);
             imageColor3.setImageResource(0);
