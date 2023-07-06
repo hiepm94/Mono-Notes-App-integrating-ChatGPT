@@ -4,7 +4,7 @@ This project is written about a Note App named MonoApp for Android. After some r
 ## Acknowledgements
 
  - [UI concept](https://dribbble.com/shots/11123324-Notes-App)
- - [Front](https://fonts.google.com/specimen/Ubuntu)
+ - [Font](https://fonts.google.com/specimen/Ubuntu)
 
 ### Library
 
