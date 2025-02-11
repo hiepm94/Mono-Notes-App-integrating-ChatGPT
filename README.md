@@ -1,6 +1,6 @@
-# Mono Notes Mobile App
+# Mono Notes - Minimal Notetaking Mobile App integrating ChatGPT
 
-This project is written about a Note App named MonoApp for Android. After some research, we decided to build a Note App with simple features. After that, we want to experiment with integrating ChatGPT into the project. All of this is only for learning and researching purposes.
+This project is written about a Note App named Mono Notes for Android. After some research, we decided to build a Note App with simple features. After that, we want to experiment with integrating ChatGPT into the project. All of this is only for learning and researching purposes.
 ## Acknowledgements
 
  - [UI concept](https://dribbble.com/shots/11123324-Notes-App)
